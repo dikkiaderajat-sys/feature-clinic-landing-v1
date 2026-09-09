@@ -1,0 +1,141 @@
+{
+  "brand": {
+    "name": "Datautomasi",
+    "tagline": "Automation for a Better Tomorrow"
+  },
+  "eyebrow": "CLINIC WHATSAPP BOOKING AUTOMATION",
+  "headline": [
+    "Pasien Berkomunikasi",
+    "Layaknya WA",
+    "Dengan Admin"
+  ],
+  "description": "Otomatisasi booking klinik melalui WhatsApp untuk jadwal, booking, reschedule, hingga pembatalan — semua ditangani dengan cepat, akurat, dan profesional.",
+  "contact": {
+    "primary_label": "Contact Us",
+    "email": "sales@datautomasi.com",
+    "email_href": "mailto:sales@datautomasi.com",
+    "whatsapp_label": "Chat WhatsApp",
+    "whatsapp_display": "08155551600",
+    "whatsapp_href": "https://wa.me/628155551600",
+    "microcopy": "Booking klinik, semudah chat biasa."
+  },
+  "phone": {
+    "clinic_name": "Klinik Gigi Sehat",
+    "status": "Online",
+    "messages": [
+      {
+        "id": "patient-question",
+        "side": "outgoing",
+        "text": "Halo, saya ingin booking periksa gigi. Apakah masih ada jadwal minggu ini?",
+        "time": "10.24"
+      },
+      {
+        "id": "bot-slots",
+        "side": "incoming",
+        "text_lines": [
+          "Halo! 👋",
+          "Tersedia beberapa jadwal untuk minggu ini:",
+          "• Rabu, 18 Sep 2024",
+          "  10.00",
+          "• Kamis, 19 Sep 2024",
+          "  14.00",
+          "• Jumat, 20 Sep 2024",
+          "  11.00",
+          "Silakan pilih jadwal yang sesuai ya."
+        ],
+        "time": "10.25"
+      },
+      {
+        "id": "patient-selection",
+        "side": "outgoing",
+        "text": "Saya pilih Kamis, 19 Sep 2024 pukul 14.00.",
+        "time": "10.26"
+      },
+      {
+        "id": "bot-confirmation",
+        "side": "incoming",
+        "text_lines": [
+          "Booking berhasil! 🎉",
+          "Kamis, 19 Sep 2024 - 14.00",
+          "Dokter: drg. Andini",
+          "Sampai jumpa di klinik kami! 😊"
+        ],
+        "time": "10.27",
+        "success": true
+      }
+    ]
+  },
+  "workflow": [
+    {
+      "id": "message",
+      "label": "Pesan Masuk",
+      "icon": "MessageCircle"
+    },
+    {
+      "id": "understand",
+      "label": "Memahami\\nKebutuhan",
+      "icon": "BrainCircuit"
+    },
+    {
+      "id": "schedule",
+      "label": "Cek Jadwal",
+      "icon": "CalendarDays"
+    },
+    {
+      "id": "confirmed",
+      "label": "Booking\\nDikonfirmasi",
+      "icon": "CircleCheckBig"
+    }
+  ],
+  "chart": {
+    "title": "Potensi Bisnis Klinik",
+    "legend": [
+      {
+        "key": "revenue",
+        "label": "Potential Revenue",
+        "semantic_color": "green"
+      },
+      {
+        "key": "loss",
+        "label": "Potential Loss",
+        "semantic_color": "red"
+      }
+    ],
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mei",
+      "Jun"
+    ],
+    "note": "Illustrative visual only; do not imply measured revenue/loss data."
+  },
+  "features": [
+    {
+      "title": "Cek Jadwal Otomatis",
+      "body": "Pasien dapat melihat jadwal dokter secara real-time.",
+      "icon": "CalendarDays"
+    },
+    {
+      "title": "Booking & Reschedule",
+      "body": "Mudah melakukan booking ulang atau reschedule.",
+      "icon": "RefreshCw"
+    },
+    {
+      "title": "Data Pasien Tercatat",
+      "body": "Semua data tersimpan rapi dan aman.",
+      "icon": "UsersRound"
+    }
+  ],
+  "removed": {
+    "top_navigation": [
+      "Home",
+      "Solusi",
+      "Cara Kerja",
+      "Kontak"
+    ],
+    "qr_code": true,
+    "old_primary_cta": "Coba Demo via WhatsApp"
+  }
+}

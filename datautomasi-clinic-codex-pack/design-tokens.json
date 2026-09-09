@@ -1,0 +1,40 @@
+{
+  "colors": {
+    "navy_900": "#0C2B63",
+    "navy_800": "#123979",
+    "blue_600": "#1681F8",
+    "blue_500": "#2A8EF7",
+    "blue_100": "#EAF5FF",
+    "cyan_100": "#F0FAFF",
+    "green_whatsapp": "#14B866",
+    "green_success": "#17B96B",
+    "red_loss": "#F04438",
+    "text_primary": "#0A2B64",
+    "text_secondary": "#5473B2",
+    "white": "#FFFFFF",
+    "card_border": "rgba(39,126,214,0.10)"
+  },
+  "radius": {
+    "button": "999px",
+    "card": "22px",
+    "workflow_card": "18px",
+    "phone": "42px"
+  },
+  "shadow": {
+    "soft": "0 14px 35px rgba(40, 103, 160, 0.10)",
+    "phone": "0 24px 55px rgba(25, 57, 91, 0.16)"
+  },
+  "typography": {
+    "preferred_family": "Inter, Plus Jakarta Sans, system-ui, sans-serif",
+    "headline_weight": 700,
+    "body_weight": 400,
+    "desktop_headline": "clamp(46px, 4vw, 66px)",
+    "body": "clamp(17px, 1.25vw, 21px)"
+  },
+  "motion": {
+    "ease_standard": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "ease_soft": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "sequence_seconds": 6.0,
+    "continuous_loop": false
+  }
+}

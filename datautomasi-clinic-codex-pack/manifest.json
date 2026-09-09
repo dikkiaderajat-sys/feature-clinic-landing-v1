@@ -1,0 +1,74 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 1033
+  },
+  {
+    "path": "assets/background/clinic-room-soft-reference.webp",
+    "bytes": 8202
+  },
+  {
+    "path": "assets/brand/datautomasi-logo-reference.png",
+    "bytes": 35964
+  },
+  {
+    "path": "assets/references/01-approved-hero-mockup.png",
+    "bytes": 1580187
+  },
+  {
+    "path": "assets/references/02-approved-smartphone-reference.png",
+    "bytes": 383644
+  },
+  {
+    "path": "assets/references/03-workflow-reference.png",
+    "bytes": 246548
+  },
+  {
+    "path": "assets/references/04-chart-reference.png",
+    "bytes": 98934
+  },
+  {
+    "path": "assets/references/05-feature-cards-reference.png",
+    "bytes": 216769
+  },
+  {
+    "path": "assets/references/06-cta-reference.png",
+    "bytes": 107651
+  },
+  {
+    "path": "assets/references/07-animation-storyboard.png",
+    "bytes": 21399
+  },
+  {
+    "path": "content.json",
+    "bytes": 3492
+  },
+  {
+    "path": "design-tokens.json",
+    "bytes": 1059
+  },
+  {
+    "path": "docs/ANIMATION_SPEC.md",
+    "bytes": 4135
+  },
+  {
+    "path": "docs/CODEX_PROMPT.md",
+    "bytes": 2225
+  },
+  {
+    "path": "docs/IMPLEMENTATION_NOTES.md",
+    "bytes": 2629
+  },
+  {
+    "path": "docs/PRD.md",
+    "bytes": 4811
+  },
+  {
+    "path": "docs/QA_CHECKLIST.md",
+    "bytes": 2562
+  },
+  {
+    "path": "docs/RESPONSIVE_SPEC.md",
+    "bytes": 1602
+  }
+]
