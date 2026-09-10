@@ -22,7 +22,12 @@ for (const url of new Set(urls)) {
 }
 assert(html.includes('0815 555 1600'), 'Incorrect WhatsApp display');
 assert(html.includes('<link rel="canonical" href="https://datautomasi.com/clinic/">'), 'Incorrect canonical');
-assert.equal((await fs.readdir(root)).sort().join(','), '_headers,clinic', 'Unexpected root output');
+assert.equal((await fs.readdir(root)).sort().join(','), '_headers,_redirects,clinic', 'Unexpected root output');
+const redirects = await fs.readFile(path.join(root, '_redirects'), 'utf8');
+assert.equal(redirects.trim(), '/ /clinic/ 302', 'Root redirect must be exactly "/ /clinic/ 302"');
+const redirectSource = redirects.trim().split(/\s+/)[0];
+assert.equal(redirectSource, '/', 'Only the root path may be redirected');
+assert.notEqual(redirectSource, '/clinic/', 'Clinic path must not be redirected');
 assert(html.includes('content="' + (process.env.SITE_INDEXABLE === 'true' ? 'index,follow' : 'noindex,nofollow') + '"'), 'Incorrect indexing mode');
 assert.equal((html.match(/class="feature-card"/g) || []).length, 3);
 assert.equal((html.match(/class="feature-pill"/g) || []).length, 28);
