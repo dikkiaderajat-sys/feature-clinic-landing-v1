@@ -1,0 +1,29 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+
+const root = path.resolve(import.meta.dirname, '../out');
+const html = await fs.readFile(path.join(root, 'index.html'), 'utf8');
+const css = await fs.readFile(path.join(root, 'styles.css'), 'utf8');
+const urls = [
+  ...[...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(match => match[1]),
+  ...[...css.matchAll(/url\(['"]?([^'")]+)['"]?\)/g)].map(match => match[1]),
+];
+for (const url of new Set(urls)) {
+  if (url.startsWith('#') || url.startsWith('data:')) continue;
+  if (url.startsWith('mailto:') || url.startsWith('https:')) {
+    assert(['mailto:sales@datautomasi.com', 'https://wa.me/628155551600'].includes(url), 'Unexpected external link: ' + url);
+    continue;
+  }
+  assert(url.startsWith('/'), 'Asset must be root-relative: ' + url);
+  const asset = path.resolve(root, '.' + url);
+  assert(asset.startsWith(root + path.sep), 'Asset outside output');
+  assert((await fs.stat(asset)).size > 0, 'Empty asset: ' + url);
+}
+assert(html.includes('0815 555 1600'), 'Incorrect WhatsApp display');
+assert(html.includes('content="' + (process.env.SITE_INDEXABLE === 'true' ? 'index,follow' : 'noindex,nofollow') + '"'), 'Incorrect indexing mode');
+assert.equal((html.match(/class="feature-card"/g) || []).length, 3);
+assert.equal((html.match(/class="feature-pill"/g) || []).length, 28);
+assert(!html.includes('<script'), 'Export must not contain QA instrumentation');
+assert(!html.includes('/__qa/'), 'QA route leaked into output');
+console.log('Output QA passed: assets, CTA targets, 3 cards, 14 duplicated pills, no QA scripts.');
