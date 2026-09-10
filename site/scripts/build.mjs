@@ -31,6 +31,7 @@ const clinic = path.join(output, 'clinic');
 await fs.mkdir(clinic, { recursive: true });
 await fs.cp(path.join(root, 'public/assets'), path.join(clinic, 'assets'), { recursive: true });
 await fs.copyFile(path.join(root, 'public/_headers'), path.join(output, '_headers'));
+await fs.copyFile(path.join(root, 'public/_redirects'), path.join(output, '_redirects'));
 const css = (await fs.readFile(path.join(root, 'app/globals.css'), 'utf8')).replace(/^@import[^;]+;\s*/gm, '');
 await fs.writeFile(path.join(clinic, 'styles.css'), css);
 await fs.writeFile(path.join(clinic, 'index.html'), `<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="${process.env.SITE_INDEXABLE === 'true' ? 'index,follow' : 'noindex,nofollow'}"><title>Clinic WhatsApp Booking Automation | Datautomasi</title><meta name="description" content="Otomatisasi booking klinik melalui WhatsApp untuk cek jadwal, booking, reschedule, pembatalan, dan pencatatan data pasien secara lebih cepat dan profesional."><link rel="canonical" href="https://datautomasi.com/clinic/"><link rel="icon" href="/clinic/assets/brand.png"><link rel="preload" href="/clinic/assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/clinic/styles.css"></head><body>${markup}</body></html>`);
