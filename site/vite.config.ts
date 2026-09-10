@@ -1,0 +1,6 @@
+import { sites } from '@openai/sites-vite-plugin';
+import tailwindcss from '@tailwindcss/postcss';
+import vinext from 'vinext';
+import { defineConfig } from 'vite';
+// This landing page has no server bindings. Keep preview and export static.
+export default defineConfig({css:{postcss:{plugins:[tailwindcss()]}},plugins:[vinext(),sites()]});
