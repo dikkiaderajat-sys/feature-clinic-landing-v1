@@ -5,7 +5,8 @@ const inter = Inter({variable:'--font-inter',subsets:['latin'],display:'swap'});
 export const metadata: Metadata = {
   title: 'Clinic WhatsApp Booking Automation | Datautomasi',
   description: 'Otomatisasi booking klinik melalui WhatsApp untuk cek jadwal, booking, reschedule, pembatalan, dan pencatatan data pasien secara lebih cepat dan profesional.',
-  robots: {index:false,follow:false},
+  alternates: {canonical:'https://datautomasi.com/clinic/'},
+  robots: {index:process.env.SITE_INDEXABLE === 'true',follow:process.env.SITE_INDEXABLE === 'true'},
 };
 export default function RootLayout({children}:Readonly<{children:React.ReactNode}>) {
   return <html lang="id"><body className={inter.variable}>{children}</body></html>;

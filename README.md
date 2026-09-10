@@ -1,5 +1,7 @@
 # Datautomasi Clinic WhatsApp Booking Automation
 
+Subpath update: the current RC serves **/clinic/** and emits **site/out/clinic/index.html** with all page resources under /clinic/. Canonical: https://datautomasi.com/clinic/. Local preview: http://127.0.0.1:4173/clinic/. Cloudflare build output remains **out**. See [SUBPATH_QA.md](SUBPATH_QA.md); earlier root-URL notes below are historical.
+
 Current release status: **Release Candidate**, production not deployed. See [RELEASE_CANDIDATE.md](RELEASE_CANDIDATE.md) for final responsive/animation/link QA, hardening changes, and exact Cloudflare Pages settings. The verified build command is `node scripts/build.mjs` from `site/`, producing `site/out/`. Preview remains noindex; set SITE_INDEXABLE=true only for the approved production environment.
 
 Latest update: **v1.1** — hero timeline is now 10 seconds including the final hold, WhatsApp display is formatted as 0815 555 1600, and a 14-feature marquee follows the existing three cards (30s desktop / 34s mobile). See [QA_UPDATE_V1.1.md](QA_UPDATE_V1.1.md) for the exact changed files and current QA results. Earlier 6-second notes below describe v1 history.

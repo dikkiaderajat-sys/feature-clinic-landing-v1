@@ -54,7 +54,7 @@ function BusinessPotentialChart() {
 export default function ClinicLandingPage() {
   const featureIcons = [CalendarDays, RefreshCw, UsersRound];
   return <main className="landing"><div className="page">
-    <header className="brand-header"><span className="brand-mark" aria-hidden="true"><img src="/assets/brand.png" alt="" width="360" height="78"/></span><div><strong>{content.brand.name}</strong><p>{content.brand.tagline}</p></div></header>
+    <header className="brand-header"><span className="brand-mark" aria-hidden="true"><img src="/clinic/assets/brand.png" alt="" width="360" height="78"/></span><div><strong>{content.brand.name}</strong><p>{content.brand.tagline}</p></div></header>
     <div className="hero">
       <section className="hero-copy" aria-labelledby="headline"><p className="eyebrow">{content.eyebrow}</p><h1 id="headline">{content.headline.map((line,i)=><span key={line} className={i ? 'blue' : ''}>{line}</span>)}</h1><p className="description">{content.description}</p>
         <div className="contact-actions"><a className="cta primary" href={content.contact.email_href}><Mail aria-hidden="true"/><span>{content.contact.primary_label}</span><ArrowRight aria-hidden="true"/></a><a className="contact-detail" href={content.contact.email_href}><Mail aria-hidden="true"/>{content.contact.email}</a><a className="cta whatsapp" href={content.contact.whatsapp_href} target="_blank" rel="noopener noreferrer"><WhatsAppIcon/><span>{content.contact.whatsapp_label}</span><ArrowRight aria-hidden="true"/></a><a className="contact-detail whatsapp-detail" href={content.contact.whatsapp_href} target="_blank" rel="noopener noreferrer"><WhatsAppIcon/>{content.contact.whatsapp_display}</a><p className="microcopy">{content.contact.microcopy}</p></div>

@@ -3,7 +3,7 @@
 @import 'shadcn/tailwind.css';
 @font-face {
   font-family: Inter;
-  src: url('/assets/inter-latin.woff2') format('woff2');
+  src: url('/clinic/assets/inter-latin.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@ p,h1,h2,figure {
 }
 .landing {
   min-height: 100svh;
-  background: #f5fbff url('/assets/clinic-background.webp') center top/100% auto no-repeat;
+  background: #f5fbff url('/clinic/assets/clinic-background.webp') center top/100% auto no-repeat;
 }
 .page {
   width: calc(100% - 112px);
